@@ -1,0 +1,17 @@
+.content-left{
+   display:flex;
+   justify-content: flex-start;
+}
+.content-right {
+   display: flex ;
+   justify-content: flex-end;
+}
+
+.top-menu li a {
+   display: inline-block;
+   height: 50px;
+   width: 100px;
+   line-height: 50px;
+   text-align: center;
+   color: #3a3838;
+}

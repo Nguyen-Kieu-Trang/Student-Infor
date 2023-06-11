@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <!--     <title>Student Information</title> -->
+   <meta name="robots" content="index,follow" />
+   
+   <style lang="css">
+      body{
+         margin-left: 60px;
+         margin-right: 60px;
+      }
+      .block {
+         min-height: 200px;
+         height: auto;
+         background-color: white;
+         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+         border-radius: 3%;
+      }
+
+      .top-section {
+         display: flex;
+         gap: 16px;
+         margin-bottom: 24px;
+      }
+
+      .-left-sectoption {
+         display: flex;
+         flex-direction: column;
+         gap: 16px;
+         flex-basis: 25%;
+         /* width: 300px; */
+      }
+      .top-left-section{
+         width: 350px;
+      }
+
+      .top-right-section {
+         flex: 1;
+      }
+
+      .top-left__top-section {
+         display: flex;
+         flex-direction: column;
+         /* gap: 16px 16px; */
+      }
+      .top-left__bottom-section{
+         display: flex;
+         flex-direction: column;
+         gap: 16px 16px;
+          box-shadow: rgba(100, 100, 111, 0.2) 7px 7px 29px 0px;
+          margin-top: 10px;
+      }
+
+      .img-cover img {
+         max-width: 100%;
+         max-height: 200px;
+         object-fit: cover;
+         width: 100%;
+         border-radius: 3%;
+      }
+
+      .profile-image img {
+         border-radius: 50%;
+         height: 164px;
+         width: 164px;
+         object-fit: cover;
+      }
+
+      .profile-container {
+         position: relative;
+         transform: translateY(-96px);
+      }
+
+      .profile-image {
+         transform: translateX(24px);
+         border-radius: 50%;
+         background-color: white;
+         height: 170px;
+         width: 170px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+      }
+      /* ----------------- */
+      #tab1{
+         margin-top: 15px;
+         margin-left: 50px;
+         display: inline-block;
+         /* box-sizing: border-box;/ */
+      }
+      .table-tab1{  
+         border: 0.5px solid rgb(154, 151, 151);
+         /* border-bottom: ; */
+         /* border-bottom: ; */
+         border-collapse: collapse;
+         font-weight: normal;
+}
+      #tab1 li{
+         /* border:  solid black; */
+         /* display: inline-block;
+         box-sizing: border-box; */
+         padding: 3px 10px;
+         /* margin-top: 5px; */
+         text-align: center;
+         list-style: none;
+      }
+      #tab1 li {
+         display: inline-block;
+         text-decoration: none;
+         color: black;
+         cursor: pointer;
+
+      }
+      /* #nd-tab1 > div{
+         display: none;
+      }
+      #nd-tab1 > div :target{
+         display: block;
+      } */
+      /* #tab1 li a {
+         text-decoration: none;
+         color: black;
+      }
+      #tab1 li a :active{
+         color: aqua;
+      } */
+      #tab1 nav {
+         display: flex;
+         margin-top: 10px;
+         margin-left: 10px;
+      }
+
+      #tab1 nav a {
+         border: 1px solid rgb(84, 84, 86);
+         /* border-style: ; */
+         /* border-radius: 3px; */
+         /* border-bottom: 5px; */
+         padding: 7px;
+         text-decoration: none;
+         color: black;
+      }
+      /* #tab1 nav a :focus{
+         color: blue;
+      } */
+      .abc a :focus{
+         color: brown;
+      }
+      #hr1{
+         width: 225px;
+         margin-top: -16px;
+      }
+      /* .tabcontent{
+         display: none;
+      } */
+      /* .tabcontent .active{
+         display: block;
+      }
+      #nd1-tab1, #nd2-tab1{
+         display: flex;
+      } */
+      /* #tab1-noidung > div {
+         display: none;
+      } */
+      /* div#tab1 label :hover{
+         color: brown;
+      } */
+
+      /* #tab1-noidung input{
+         display: none;
+      }
+      #tab1-noidung > input:checked + div{
+         display: block;
+} */
+     /* --------------- */
+
+     #tab2{
+         margin-top: 15px;
+         margin-left: 50px;
+         display: inline-block;
+         /* box-sizing: border-box;/ */
+      }
+      .table-tab2{  
+         border: 0.5px solid rgb(176, 172, 172);
+         /* border-bottom: ; */
+         /* border-bottom: ; */
+         border-collapse: collapse;
+         font-weight: normal
+}
+      #tab2 label{
+         /* border:  solid black; */
+         /* display: inline-block;
+         box-sizing: border-box; */
+         padding: 3px 10px;
+         /* margin-top: 5px; */
+         text-align: center;
+         list-style: none;
+      }
+      #tab2 label {
+         display: inline-block;
+         text-decoration: none;
+         /* color: black; */
+         cursor: pointer;
+      }
+      .table-tab2 label :focus-within{
+         color: brown;
+      }
+       .table-tab2  a{
+         color: black;
+         text-decoration: none;
+       }
+       .table-tab2  a :focus{
+         color: brown;
+       }
+      #hr2{
+         width: 600px;
+         margin-top: -5.4px;
+      }
+      #tab2-noidung{
+         margin-left: 50px;
+      }
+      #tab2-noidung > div {
+         display: none;
+      }
+       label :hover{
+         color: brown;
+      }
+       label :focus{
+            color: brown;
+      }
+      #tab2-noidung input{
+         display: none;
+      }
+      #tab2-noidung input :focus{
+         color: brown;
+      }
+      #tab2-noidung > input:checked + div{
+         display: block;
+}
+      /* #no-border > table,  #no-border > tr,  #no-border > th{
+         text-align: left;
+      } */
+      .table3{  
+         /* border: 0.5px solid rgb(154, 151, 151); */
+         /* border-bottom: ; */
+         /* border-bottom: ; */
+         /* border-collapse: collapse; */
+         font-weight: normal;
+         text-align: left;
+}
+      .table3 th {
+         width: 250px;
+      }
+      .table3 tr{
+         height: 27px;
+      }
+
+      .bottom-section{
+         display: flex;
+         /* margin-top: 20px; */
+         padding-top: 20px;
+         padding-left: 50px  ;
+      }
+      .bottom-section-left > img, .bottom-section-right> img{
+         margin-top: 10px;
+         margin-right: 20px;
+         text-align: center;
+      }
+     
+   </style>
+</head>
+
+<body>
+   <section class="top-section">
+      <div class="top-left-section">
+         <div class="block top-left__top-section" style="height: 450px;">
+            <div class="img-cover">
+               <img
+                  src="image/1.jpg" alt="" />
+            </div>
+            <div class="profile-container">
+               <div class="profile-image">
+                  <img src="image/2.jpg" alt="" />
+               </div>
+               <div class="profile-info">
+                  <ul>
+                     <p>MS: 20205174</p>
+                     <p>Ho ten: Nguyen Kieu Trang</p>
+                     <p>Lop: ICT 02</p>
+                     <p>Email: trang.nk205174@sis.hust.edu.vn</p>
+                  </ul>
+               </div>
+            </div>
+         </div>
+         <div class="block top-left__bottom-section">
+            <div id="tab1">
+               <!-- <label for="nd1-tab1">Trạng thái</label>
+               <label for="nd2-tab1">Quản lý</label> -->
+               <!-- <table class="table-tab1">
+                  <tr class="table-tab1">
+                     <th class="table-tab1 "><li><a href="#nd1-tab1" class="active">Trạng thái</a></li></th>
+                     <th class="table-tab1"><li><a href="#nd2-tab1">Quản lý</a></li></th>
+                  </tr>
+               </table> -->
+               <nav class="abc">
+                  <!-- <a href="#" class="active">Trạng thái</a>
+                  <a href="#">Quản lý</a> -->
+                  <a href="#" onclick="res1()">Trạng thái</a>
+                  <a href="#" onclick="hide1()">Quản lý</a>
+                  
+                  
+               </nav>
+
+            </div>
+            <hr id="hr1">
+            
+               <!-- <input type="radio" id="nd1-tab1" name="iptt" checked> -->
+            <div id="nd-tab1" class="tab-content">
+                  <div id="nd1-tab1" class="active">
+                     <ul>
+                        <p>Trạng thái học tập: Học</p>
+                        <p>CPA: 3.2</p>
+                        <p>Nợ: 0 TC</p>
+                        <p>Tích lũy: 65TC</p>
+                        <p>Mức cảnh cáo: 0</p>
+                        <p>Trình độ: 3</p>
+                     </ul>
+                  
+                  </div>
+                  <!-- <input type="radio" id="nd2-tab1" name="iptt" > -->
+                  
+                  
+                  
+                  </div>
+               </div>
+               <!-- <div id="nd1-tab1" class="tabcontent">
+                  <ul>
+                     <p>Trạng thái học tập: Học</p>
+                     <p>CPA: </p>
+                     <p>Nợ: </p>
+                     <p>Tích lũy:</p>
+                     <p>Mức cảnh cáo:</p>
+                     <p>Trình độ:</p>
+                  </ul>
+
+               </div>
+                <input type="radio" id="nd2-tab1" name="iptt" > 
+               <div id="nd2-tab1" class="tabcontent">
+                  <ul>
+                     <p>Nội dung tab 2</p>
+                  </ul>
+                  
+
+               </div>
+               
+             -->
+
+            </div>
+      </div>
+
+      <div class="block top-right-section">
+                     <div id="tab2">
+                        <!-- <label for="nd1-tab1">Trạng thái</label>
+                                    <label for="nd2-tab1">Quản lý</label> -->
+                        <table class="table-tab2">
+                           <tr class="table-tab2">
+                              <th class="table-tab2"><label for="nd1-tab2">Lý lịch</label></th>
+                              <th class="table-tab2"><label for="nd2-tab2">Quyết định</label></th>
+                              <th class="table-tab2"><label for="nd3-tab2">Khen thưởng</label></th>
+                              <th class="table-tab2"><label for="nd4-tab2">Liên hệ</label></th>
+                              <th class="table-tab2"><label for="nd5-tab2">Nhận xét</label></th>
+                              <th class="table-tab2"><label for="nd6-tab2">Hoạt động tham gia</label></th>
+                              <!-- <th style="border-bottom: 20px;"> </th> -->
+                           </tr>
+                        </table>
+                     </div>
+                     <hr id="hr2">
+                     <div id="tab2-noidung">
+                        <input type="radio" id="nd1-tab2" name="iptt" checked>
+                        <div>
+                           <p style="font-weight: bold; font-size: large; text-decoration: underline;">Thông tin cá nhân</p>
+                           <table id="no-border" class="table3">
+                              <tr class="table3">
+                                 <th class="table3">Ngày sinh: 26-07-2002</th>
+                                 <th class="table3">Nơi sinh: NGHỆ AN</th>
+                                 <th class="table3">Giới tính: NỮ</th>
+                              </tr>
+                              <tr class="table3">
+                                 <th class="table3">Số CMND: 123456789</th>
+                                 <th class="table3">Nơi cấp: NGHỆ AN</th>
+                                 <th class="table3">Ngày cấp: 14-02-2020</th>
+                              </tr>
+                              <tr>
+                                 <th class="table3">Dân tộc: KINH</th>
+                                 <th class="table3">Tôn giáo: KHÔNG</th>
+                                 <th class="table3">Chi Đoàn: CÓ</th>
+                              </tr>
+                              <tr class="table3">
+                                 <th class="table3">Ngày vào Đoàn: 26-03-2020</th>
+                                 <th class="table3">Ngày vào Đảng:</th>
+                                 <th class="table3">Đoàn viên: </th>
+                              </tr>
+                              <t class="table3"r>
+                                 <th class="table3">Đối tượng chính sách: KHÔNG</th>
+                              </t>
+                              <tr class="table3">
+                                 <th class="table3">Số thẻ bảo hiểm: 012345697</th>
+                              </tr>
+                              <tr class="table3">
+                                 <th class="table3">Địa chỉ thường trú: NGHỆ AN</th>
+                              </tr>
+                              <tr class="table3">
+                                 <th class="table3">Nơi ở hiện tại: HÀ NỘI</th>
+                              </tr>
+                           </table>
+                     
+                           <p style="font-weight: bold; font-size: large; text-decoration: underline;">Thông tin gia đình</p>
+                           <table id="no-border" class="table3">
+                              <tr class="table3">
+                                 <th class="table3"><strong>Họ và tên cha:</strong> NGUYỄN VĂN A</th>
+                  
+                              </tr>
+                              <tr class="table3">
+                                 <th class="table3">Dân tộc: KINH</th>
+                                 <th class="table3">Năm sinh: 1976</th>
+                                 <th class="table3">Quốc tịch: VIET NAM</th>
+                              </tr>
+                              <tr class="table3">
+                                 <th class="table3">Nơi làm việc: NGHỆ AN</th>
+                                 <th class="table3">Tôn giáo: KHÔNG</th>
+                                 <th class="table3">Nghề nghiệp: ABC</th>
+                              </tr>
+                              <tr>
+                                 <th class="table3">Địa chỉ thường trú: NGHỆ AN</th>
+                                 
+                              </tr>
+                              <tr class="table3">
+                                 <th class="table3">Liên hệ: 012345675</th>
+                                 
+                              </tr>
+                              <tr class="table3"r>
+                                 <th class="table3"><strong>Họ và tên mẹ:</strong> NGUYỄN THỊ H</th>
+                              </tr>
+                              <tr class="table3">
+                                 <th class="table3">Dân tộc: KINH</th>
+                                 <th class="table3">Năm sinh: 1977</th>
+                                 <th class="table3">Quốc tịch: VIET NAM</th>
+                              </tr>
+                              <tr class="table3">
+                                 <th class="table3">Nơi làm việc: NGHỆ AN</th>
+                                 <th class="table3">Tôn giáo: KHÔNG</th>
+                                 <th class="table3">Nghề nghiệp: ABC</th>
+                              </tr>
+                              <tr>
+                                 <th class="table3">Địa chỉ thường trú: NGHỆ AN</th>
+                              
+                              </tr>
+                              <tr class="table3">
+                                 <th class="table3">Liên hệ: 012345675</th>
+                              
+                              </tr>
+                           </table>
+                     
+                        </div>
+
+                        <input type="radio" id="nd2-tab2" name="iptt">
+                        <div>
+                           <ul>
+                              <p>Nội dung tab 2</p>
+                           </ul>
+                        </div>
+                        <input type="radio" id="nd3-tab2" name="iptt">
+                        <div>
+                           <ul>
+                              <p>Nội dung tab 3</p>
+                           </ul>
+                        </div>
+                        <input type="radio" id="nd4-tab2" name="iptt">
+                        <div>
+                           <ul>
+                              <p>Nội dung tab 4</p>
+                           </ul>
+                        </div>
+                        <input type="radio" id="nd5-tab2" name="iptt">
+                        <div>
+                           <ul>
+                              <p>Nội dung tab 5</p>
+                           </ul>
+                        </div>
+                        <input type="radio" id="nd6-tab2" name="iptt">
+                        <div>
+                           <ul>
+                              <p>Nội dung tab 6</p>
+                           </ul>
+                        </div>
+                     
+                     </div>
+
+      </div>
+   </section>
+   <section class="block bottom-section">
+      <div class="bottom-section-left">
+         <div><b>Biểu đồ học tập</b></div>
+         <img src="hoctap.jpg" alt="" width="70%">
+      </div>
+      <div class="bottom-section-right">
+         <div><b>Biểu đồ rèn luyện</b></div>
+         <img src="renluyen.jpg" alt="" width="70%">
+      </div>
+   </section>
+</body>
+
+ <script type="text/javascript"> 
+             function hide1() {
+                  var content1 = document.getElementsByClassName("active");
+                  for (var i = 0; i < content1.length; i++)
+                     content1[i].style.display = "none";
+               }
+               function res1() {
+                  var content1 = document.getElementsByClassName("active");
+                  for (var i = 0; i < content1.length; i++)
+                     content1[i].style.display = "block";
+               }
+
+      //   var buttons = document.getElementsByClassName('tablinks');
+      //   var contents = document.getElementsByClassName('tabcontent');
+      //   function showContent(id){
+      //       for (var i = 0; i < contents.length; i++) {
+      //           contents[i].style.display = 'none';
+      //       }
+      //       var content = document.getElementById(id);
+      //       content.style.display = 'block';
+      //   }
+      //   for (var i = 0; i < buttons.length; i++) {
+      //       buttons[i].addEventListener("click", function(){
+      //           var id = this.textContent;
+      //           for (var i = 0; i < buttons.length; i++) {
+      //               buttons[i].classList.remove("active");
+      //           }
+      //           this.className += " active";
+      //           showContent(id);
+      //       });
+      //   }
+      //   showContent('nd1-tab1');
+    </script>
+</html>
